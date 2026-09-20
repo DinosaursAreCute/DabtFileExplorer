@@ -11,7 +11,7 @@
     </pane>
   </pane>
 
-  <label id="fx_path"  pane="fx_bar" row="0" text="" class="path"/>
+  <input id="fx_path" pane="fx_bar" row="0" label="Path:" placeholder="type a folder, Enter to go" submit="fx_goto" class="path"/>
   <table id="fx_table" pane="fx_files" row="0" rows="0" columns="Name|Size|Kind" data="" action="fx_open" on_change="fx_moved"/>
 
   <bind key="backspace" action="fx_up"            desc="Parent folder"/>

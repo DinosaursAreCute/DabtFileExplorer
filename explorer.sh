@@ -13,7 +13,7 @@ TUI_APP_NAME="${TUI_APP_NAME:-explorer}"
 TUI_APP_TITLE="DABT File Explorer"; TUI_APP_DESC="Browse folders and preview file contents"; TUI_APP_ENTRY="explorer.sh"
 source "$TUI_ROOT/lib/tui.sh"
 
-FX_START="${1:-${DABT_CALL_DIR:-$PWD}}"      # dabt app run cds into the app: DABT_CALL_DIR is where you started it
+FX_START="${1:-$HOME}"                     # default: the user's home folder
 [[ -d "$FX_START" ]] || { echo "explorer: '$FX_START' is not a folder" >&2; exit 1; }
 FX_START="$(cd -P "$FX_START" && pwd -P)"
 
