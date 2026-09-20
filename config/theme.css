@@ -1,0 +1,16 @@
+/* DABT File Explorer theme */
+.frame        { fg: #dbe4ff; bg: #1a1c2c; }
+.frame:border { fg: #ff5bef; }
+.frame:title  { fg: #00f7ff; mods: bold; }
+
+.bar          { fg: #dbe4ff; bg: #232640; }
+.bar:border   { fg: #4c566a; }
+.path         { fg: #88c0d0; mods: bold; }
+
+.panel        { fg: #c9d6e3; bg: #1c2336; }
+.panel:border { fg: #4c566a; }
+.panel:title  { fg: #61afef; mods: bold; }
+.panel:focus  { fg: #ffffff; bg: #22304a; }
+
+.table_sel    { fg: #10131c; bg: #61afef; mods: bold; }
+.table_head   { fg: #9fb0c9; mods: bold underline; }

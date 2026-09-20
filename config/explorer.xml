@@ -1,0 +1,23 @@
+<tui on_visit="fx_visit">
+  <script src="explorer_callbacks.sh"/>
+  <theme src="theme.css"/>
+  <footer items="enter|Open;backspace|Up;.|Hidden;~|Home;r|Reload;tab|Switch pane;q|Quit"/>
+
+  <pane id="root" split="v" title="DABT File Explorer" border="single" class="frame">
+    <pane id="fx_bar" weight="8" max_height="3" border="single" class="bar" hpad="1" scroll="none"/>
+    <pane id="fx_body" weight="92" split="h" border="none">
+      <pane id="fx_files"   weight="42" title="Files"   border="single" class="panel" hpad="1"/>
+      <pane id="fx_preview" weight="58" title="Preview" border="single" class="panel" hpad="1"/>
+    </pane>
+  </pane>
+
+  <label id="fx_path"  pane="fx_bar" row="0" text="" class="path"/>
+  <table id="fx_table" pane="fx_files" row="0" rows="0" columns="Name|Size|Kind" data="" action="fx_open" on_change="fx_moved"/>
+
+  <bind key="backspace" action="fx_up"            desc="Parent folder"/>
+  <bind key="alt+up"    action="fx_up"            desc="Parent folder"/>
+  <bind key="."         action="fx_toggle_hidden" desc="Show / hide hidden files"/>
+  <bind key="~"         action="fx_home"          desc="Go to your home folder"/>
+  <bind key="r"         action="fx_reload"        desc="Reload the folder"/>
+  <bind key="v"         action="fx_view_full"     desc="View the whole file"/>
+</tui>

@@ -1,0 +1,9 @@
+# DABT application metadata - read by `dabt app install`
+name        = explorer
+title       = DABT File Explorer
+description = Browse folders and preview file contents in the terminal
+author      = Dino
+version     = 0.1.0
+entry       = explorer.sh
+own_dir     = yes
+min_dabt    = 0.0.6
