@@ -5,7 +5,7 @@ requires_dabt = ">=0.0.7"          # the .dapk needs the packaging commands; .da
 homepage      = "https://github.com/DinosaursAreCute/DabtFileExplorer"
 changelog     = "CHANGELOG.md"
 publish_repo  = "DinosaursAreCute/DabtFileExplorer"
-sign_key      = "~/.ssh/dabt_ed25519"   # Ed25519 key; in CI export the private key as DABT_SIGN_KEY instead
+
 
 # what ships (dotfiles other than .dabt.metadata, dist/ and this file are never packaged)
 include_paths = ["explorer.sh", "config", "README.md"]
