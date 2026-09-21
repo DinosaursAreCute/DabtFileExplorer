@@ -1,5 +1,7 @@
 # DABT File Explorer
 
+[![Build](https://github.com/DinosaursAreCute/DabtFileExplorer/actions/workflows/dabt-release.yml/badge.svg)](https://github.com/DinosaursAreCute/DabtFileExplorer/actions/workflows/dabt-release.yml)
+
 A terminal file explorer written in pure bash. Browse folders and preview file contents with keyboard and mouse. Built on **[D.A.B.T (DinosAmazingBashTui)](https://github.com/DinosaursAreCute/DinosAmazingBashTui)**, the zero-dependency bash TUI framework ([docs](https://dinosaursarecute.github.io/DinosAmazingBashTui/)).
 
 ## Install
