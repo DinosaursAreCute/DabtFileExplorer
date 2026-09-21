@@ -1,0 +1,17 @@
+# dabt.pkg - build configuration for `dabt build` (TOML). Docs: DinosAmazingBashTui docs/concepts/dapk-packaging.md
+name          = "explorer"
+entry         = "explorer.sh"
+requires_dabt = ">=0.0.7"          # the .dapk needs the packaging commands; .dabt.metadata keeps min_dabt for `dabt app install`
+homepage      = "https://github.com/DinosaursAreCute/DabtFileExplorer"
+changelog     = "CHANGELOG.md"
+publish_repo  = "DinosaursAreCute/DabtFileExplorer"
+sign_key      = "~/.ssh/dabt_ed25519"   # Ed25519 key; in CI export the private key as DABT_SIGN_KEY instead
+
+# what ships (dotfiles other than .dabt.metadata, dist/ and this file are never packaged)
+include_paths = ["explorer.sh", "config", "README.md"]
+
+# extra files go in [[include]] tables (target is relative to the package root), e.g.:
+# [[include]]
+# type   = "file"
+# source = "LICENSE"
+# target = "docs/"

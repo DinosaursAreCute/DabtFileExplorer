@@ -21,3 +21,15 @@ Or run it directly with DABT installed: `bash explorer.sh [START_DIR]`.
 - `config/theme.css`: styling
 
 Want to build your own app like this? See [Writing Your First App](https://dinosaursarecute.github.io/DinosAmazingBashTui/tutorials/writing-your-first-app).
+
+## Build and release
+
+Packaged with `dabt build` (see `dabt.pkg`); the `.dapk` is signed and installable with `dabt app install`.
+
+```bash
+dabt build                                   # -> dist/explorer-<version>+<build>.dapk
+dabt pkg release minor                       # bump VERSION, close the changelog's Unreleased section, commit + tag
+git push --follow-tags                       # the workflow in .github/workflows builds, signs and drafts the GitHub release
+```
+
+Add the private signing key as the repository secret `DABT_SIGN_KEY`. Release notes come from `CHANGELOG.md` (`### News` bullets are shown to users before they update).
