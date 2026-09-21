@@ -37,7 +37,7 @@ jobs:
         if: "!startsWith(github.ref, 'refs/tags/v')"
         env:
           DABT_SIGN_KEY: ${{ secrets.DABT_SIGN_KEY }}
-        run: dabt build --suffix dev
+        run: dabt build --auto-sign --suffix dev
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
